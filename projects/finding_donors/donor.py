@@ -22,7 +22,7 @@ def train_predict(learner, sample_size, X_train, y_train, X_test, y_test):
     end = time()
     results['pred_time'] = end - start
 
-    #evaluat scores
+    #evaluate scores
     results['acc_train'] = accuracy_score(y_train[:300], pred_train)
     results['acc_test'] = accuracy_score(y_test, pred_test)
     results['f_train'] = fbeta_score(y_train[:300], pred_train, 0.5)
